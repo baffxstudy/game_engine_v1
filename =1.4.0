@@ -1,0 +1,5 @@
+Collecting fake-useragent
+  Downloading fake_useragent-2.2.0-py3-none-any.whl.metadata (17 kB)
+Downloading fake_useragent-2.2.0-py3-none-any.whl (161 kB)
+Installing collected packages: fake-useragent
+Successfully installed fake-useragent-2.2.0

@@ -1,0 +1,1333 @@
+{
+   "master_slip_id": "MSL-20240515-001",
+   "generated_slips": [
+      {
+         "slip_id": "SLIP_000001",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000002",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000003",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000004",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000005",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000006",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000007",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000008",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000009",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000010",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000011",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000012",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000013",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000014",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000015",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000016",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000017",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000018",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Draw",
+               "odds": 2.6,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 8.84,
+         "confidence_score": 0.6,
+         "stake": 0.92,
+         "possible_return": 8.13,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000019",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Away",
+               "odds": 4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 5.4,
+         "confidence_score": 0.6,
+         "stake": 0.92,
+         "possible_return": 4.97,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000020",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.9,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 3.71,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 3.97,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000021",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "away_under",
+               "odds": 2.1,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "No",
+               "odds": 1.85,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 3.89,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 4.16,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000022",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Away",
+               "odds": 7.5,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Home",
+               "odds": 2.7,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 20.25,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 15.59,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000023",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Home",
+               "odds": 1.85,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "No",
+               "odds": 1.85,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 3.42,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 3.66,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000024",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "total_over",
+               "odds": 1.8,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 3.51,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 3.76,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000025",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Home",
+               "odds": 1.85,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "2-2",
+               "odds": 19,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 35.15,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 27.07,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000026",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 2.63,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 2.81,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000027",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "total_under",
+               "odds": 2,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 6.8,
+         "confidence_score": 0.6,
+         "stake": 0.92,
+         "possible_return": 6.26,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000028",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "2-0",
+               "odds": 7,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "1-0",
+               "odds": 7.5,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 52.5,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 40.43,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000029",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "3-1",
+               "odds": 11,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Draw",
+               "odds": 2,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 22,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 16.94,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000030",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Draw",
+               "odds": 2.6,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Away",
+               "odds": 4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 10.4,
+         "confidence_score": 0.6,
+         "stake": 0.92,
+         "possible_return": 9.57,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000031",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Draw",
+               "odds": 2.6,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 5.07,
+         "confidence_score": 0.6,
+         "stake": 0.92,
+         "possible_return": 4.66,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000032",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Home",
+               "odds": 1.85,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "both_teams_to_score",
+               "selection": "Yes",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 3.61,
+         "confidence_score": 0.7,
+         "stake": 1.07,
+         "possible_return": 3.86,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "hedge",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000033",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "halftime_result",
+               "selection": "Home",
+               "odds": 1.85,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 6.29,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 4.84,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000034",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "total_over",
+               "odds": 1.8,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Away",
+               "odds": 4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 7.2,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 5.54,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000035",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000036",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "0-2",
+               "odds": 17,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 22.95,
+         "confidence_score": 0.7000000000000001,
+         "stake": 1.07,
+         "possible_return": 24.56,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000037",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "corners",
+               "selection": "total_under",
+               "odds": 1.85,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 2.5,
+         "confidence_score": 0.9,
+         "stake": 1.38,
+         "possible_return": 3.45,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000038",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "1-0",
+               "odds": 7.5,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 10.13,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 12.46,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000039",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "2-0",
+               "odds": 7,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "corners",
+               "selection": "home_under",
+               "odds": 1.95,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 13.65,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 10.51,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000040",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "home_over",
+               "odds": 1.85,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 6.29,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 4.84,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000041",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "corners",
+               "selection": "total_under",
+               "odds": 2,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 6.8,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 5.24,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000042",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "halftime_result",
+               "selection": "Away",
+               "odds": 4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 5.4,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 6.64,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000043",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.8,
+         "stake": 1.23,
+         "possible_return": 5.65,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "core",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000044",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "Match Result",
+               "selection": "Home",
+               "odds": 1.35,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "Match Result",
+               "selection": "Draw",
+               "odds": 3.4,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 4.59,
+         "confidence_score": 0.5,
+         "stake": 0.77,
+         "possible_return": 3.53,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "balanced",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000045",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "2-1",
+               "odds": 9,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "1-0",
+               "odds": 7.5,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 67.5,
+         "confidence_score": 0.4,
+         "stake": 0.61,
+         "possible_return": 41.17,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "opposite",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000046",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "2-0",
+               "odds": 7,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "0-2",
+               "odds": 17,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 119,
+         "confidence_score": 0.4,
+         "stake": 0.61,
+         "possible_return": 72.59,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "opposite",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000047",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "1-2",
+               "odds": 34,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "2-0",
+               "odds": 11,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 374,
+         "confidence_score": 0.4,
+         "stake": 0.61,
+         "possible_return": 228.14,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "opposite",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000048",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "1-2",
+               "odds": 34,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "2-2",
+               "odds": 19,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 646,
+         "confidence_score": 0.4,
+         "stake": 0.61,
+         "possible_return": 394.06,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "opposite",
+         "edge_score": 0
+      },
+      {
+         "slip_id": "SLIP_000049",
+         "legs": [
+            {
+               "match_id": "EPL-20240518-001",
+               "market": "correct_score",
+               "selection": "1-2",
+               "odds": 34,
+               "is_fallback": false
+            },
+            {
+               "match_id": "SERIEA-20240519-001",
+               "market": "correct_score",
+               "selection": "1-2",
+               "odds": 13,
+               "is_fallback": false
+            }
+         ],
+         "total_odds": 442,
+         "confidence_score": 0.4,
+         "stake": 0.61,
+         "possible_return": 269.62,
+         "risk_level": "Medium",
+         "error": null,
+         "variation_type": "opposite",
+         "edge_score": 0
+      }
+   ],
+   "metadata": {
+      "total_slips": 49,
+      "engine_version": "3.1.0-stable",
+      "processing_time_ms": 22
+   }
+}

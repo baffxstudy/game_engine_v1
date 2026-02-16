@@ -1,0 +1,345 @@
+{
+  "scan_metadata": {
+    "timestamp": "2026-01-20T05:05:02.655196",
+    "url": "https://www.sportybet.com/gh/m/",
+    "scanner_version": "3.0.0",
+    "features": [
+      "element_caching",
+      "search_intelligence",
+      "enhanced_scoring",
+      "real_madrid_search"
+    ]
+  },
+  "selectors": {
+    "navigation_links": {
+      "description": "Elements matching navigation_links patterns",
+      "items": [
+        {
+          "selector": "[class*=\"nav\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-main-mid",
+            "m-has-bottom-nav",
+            "has-bg-color"
+          ],
+          "text_content": "SportyBet   Join Now Log in            \n      Sporty Hero\n     \n      24/7 Dog Racing\n     \n      Sp",
+          "attributes": {
+            "class": "m-main-mid m-has-bottom-nav has-bg-color"
+          },
+          "score": 0,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-main m-layout-main "
+        },
+        {
+          "selector": "[class*=\"header\"]",
+          "tag_name": "div",
+          "classes": [
+            "featured-header-left"
+          ],
+          "text_content": "Featured\n         MatchesGamesCodesVirtuals   ",
+          "attributes": {
+            "data-v-0d4eb919": "",
+            "class": "featured-header-left"
+          },
+          "score": 0,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "featured-nav-list "
+        }
+      ]
+    },
+    "buttons": {
+      "description": "Elements matching buttons patterns",
+      "items": [
+        {
+          "selector": "[class*=\"button\"]",
+          "tag_name": "div",
+          "classes": [
+            "fb-login-button"
+          ],
+          "attributes": {
+            "class": "fb-login-button",
+            "data-width": "130",
+            "data-max-rows": "1",
+            "data-size": "medium",
+            "data-button-type": "login_with",
+            "data-show-faces": "false",
+            "data-auto-logout-link": "false",
+            "data-use-continue-as": "false",
+            "style": "display: none;"
+          },
+          "score": 0,
+          "is_visible": false,
+          "is_enabled": true,
+          "parent_context": " notInWebView"
+        },
+        {
+          "selector": "[class*=\"btn\"]",
+          "tag_name": "div",
+          "classes": [
+            "fail-btn"
+          ],
+          "text_content": "Reload",
+          "attributes": {
+            "class": "fail-btn"
+          },
+          "score": 0,
+          "is_visible": false,
+          "is_enabled": true,
+          "parent_context": "loading-page-fail "
+        }
+      ]
+    },
+    "match_odds": {
+      "description": "Betting-specific: match_odds",
+      "items": [
+        {
+          "selector": "div[class*=\"outcome\"]",
+          "tag_name": "div",
+          "classes": [
+            "featuredMatchOutcome",
+            "outcomes"
+          ],
+          "text_content": "11.97  21.84",
+          "attributes": {
+            "data-v-b9896ed6": "",
+            "data-v-41de0196": "",
+            "data-outcomecount": "2",
+            "class": "featuredMatchOutcome outcomes"
+          },
+          "score": 33,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "bottom "
+        },
+        {
+          "selector": "span[class*=\"odds\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "2.00",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 28,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-outcome m-event-outcome-default "
+        },
+        {
+          "selector": "span[class*=\"outcome\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "2.00",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 28,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-outcome m-event-outcome-default "
+        },
+        {
+          "selector": "span[class*=\"odd\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "2.00",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 28,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-outcome m-event-outcome-default "
+        },
+        {
+          "selector": "div[class*=\"odds\"]",
+          "tag_name": "div",
+          "classes": [
+            "odds"
+          ],
+          "text_content": "1.97",
+          "attributes": {
+            "data-v-b9896ed6": "",
+            "class": "odds"
+          },
+          "score": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-outcome m-event-outcome-default "
+        },
+        {
+          "selector": "div[class*=\"market\"]",
+          "tag_name": "div",
+          "classes": [
+            "market"
+          ],
+          "text_content": "Game handicap 10.5",
+          "attributes": {
+            "data-v-41de0196": "",
+            "class": "market"
+          },
+          "score": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "mid "
+        },
+        {
+          "selector": "div[class*=\"odd\"]",
+          "tag_name": "div",
+          "classes": [
+            "odds"
+          ],
+          "text_content": "1.97",
+          "attributes": {
+            "data-v-b9896ed6": "",
+            "class": "odds"
+          },
+          "score": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-outcome m-event-outcome-default "
+        }
+      ]
+    },
+    "match_markets": {
+      "description": "Betting-specific: match_markets",
+      "items": [
+        {
+          "selector": "div[class*=\"tab\"]",
+          "tag_name": "div",
+          "classes": [
+            "tabList"
+          ],
+          "text_content": " MatchesGamesCodesVirtuals   ",
+          "attributes": {
+            "data-v-0d4eb919": "",
+            "role": "group",
+            "aria-label": "featured widget tablist container",
+            "class": "tabList"
+          },
+          "score": 28,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "featured-header-left "
+        }
+      ]
+    },
+    "match_selections": {
+      "description": "Betting-specific: match_selections",
+      "items": []
+    },
+    "betslip_container": {
+      "description": "Betting-specific: betslip_container",
+      "items": [
+        {
+          "selector": "div[class*=\"slip\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-float-wrapper",
+            "real-theme"
+          ],
+          "text_content": "0 BETSLIP",
+          "attributes": {
+            "data-op": "betslip-icon",
+            "class": "betslip-float-wrapper real-theme"
+          },
+          "score": 31,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-bottom-nav "
+        },
+        {
+          "selector": "div[class*=\"betslip\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-float-wrapper",
+            "real-theme"
+          ],
+          "text_content": "0 BETSLIP",
+          "attributes": {
+            "data-op": "betslip-icon",
+            "class": "betslip-float-wrapper real-theme"
+          },
+          "score": 31,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "m-bottom-nav "
+        },
+        {
+          "selector": "div[class*=\"bet\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-bet-tab"
+          ],
+          "text_content": "Live  \n          vFootball\n        \n          Basketball\n        \n          Tennis\n        \n        ",
+          "attributes": {
+            "class": "m-bet-tab"
+          },
+          "score": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "parent_context": "live-container "
+        }
+      ]
+    },
+    "forms": {
+      "description": "All form elements",
+      "items": []
+    }
+  },
+  "interaction_flow": [],
+  "screenshots": [
+    {
+      "name": "01_homepage",
+      "path": "selector_scans\\screenshots\\01_homepage.png",
+      "stage": "stage1",
+      "timestamp": "2026-01-20T05:06:12.127585"
+    },
+    {
+      "name": "03_match_details",
+      "path": "selector_scans\\screenshots\\03_match_details.png",
+      "stage": "stage3",
+      "timestamp": "2026-01-20T05:06:24.848888"
+    },
+    {
+      "name": "04_betslip",
+      "path": "selector_scans\\screenshots\\04_betslip.png",
+      "stage": "stage4",
+      "timestamp": "2026-01-20T05:06:48.402861"
+    }
+  ],
+  "statistics": {
+    "total_elements_found": 15,
+    "categories_scanned": 7,
+    "elements_per_category": {
+      "navigation_links": 2,
+      "buttons": 2,
+      "match_odds": 7,
+      "match_markets": 1,
+      "match_selections": 0,
+      "betslip_container": 3,
+      "forms": 0
+    },
+    "screenshots_captured": 3,
+    "interaction_stages": 0,
+    "cache_hits": 6,
+    "selectors_scanned": 85,
+    "high_confidence_count": 2
+  },
+  "search_findings": {
+    "search_inputs": [],
+    "search_buttons": [],
+    "best_search_input": null,
+    "best_search_button": null
+  }
+}

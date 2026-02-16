@@ -1,0 +1,282 @@
+{
+  "url": "https://www.sportybet.com/gh/m/",
+  "timestamp": "2026-01-20T05:29:00.658905",
+  "recommended_selectors": {
+    "search_elements": [
+      {
+        "selector": "[class*=\"search\"]",
+        "tag": "span",
+        "classes": [
+          "m-icon-search"
+        ],
+        "score": 0
+      }
+    ],
+    "navigation_links": [
+      {
+        "selector": "[class*=\"nav\"]",
+        "tag": "div",
+        "classes": [
+          "m-main-mid",
+          "m-has-bottom-nav",
+          "has-bg-color"
+        ],
+        "score": 0
+      },
+      {
+        "selector": ":text(\"menu\")",
+        "tag": "span",
+        "classes": [
+          "label"
+        ],
+        "score": 0
+      },
+      {
+        "selector": ":has-text(\"menu\")",
+        "tag": "html",
+        "classes": [],
+        "score": 0
+      },
+      {
+        "selector": ":has-text(\"menu\")",
+        "tag": "body",
+        "classes": [],
+        "score": 0
+      },
+      {
+        "selector": "[class*=\"header\"]",
+        "tag": "div",
+        "classes": [
+          "featured-header-left"
+        ],
+        "score": 0
+      }
+    ],
+    "buttons": [
+      {
+        "selector": "[class*=\"button\"]",
+        "tag": "div",
+        "classes": [
+          "fb-login-button"
+        ],
+        "score": 0
+      },
+      {
+        "selector": "[class*=\"btn\"]",
+        "tag": "div",
+        "classes": [
+          "fail-btn"
+        ],
+        "score": 0
+      }
+    ],
+    "match_containers": [
+      {
+        "selector": "div[class*=\"match\"]",
+        "tag": "div",
+        "classes": [
+          "prematch-live-banner"
+        ],
+        "score": 20
+      },
+      {
+        "selector": "div[class*=\"event\"]",
+        "tag": "div",
+        "classes": [
+          "m-event-list"
+        ],
+        "score": 15
+      },
+      {
+        "selector": "span[class*=\"event\"]",
+        "tag": "span",
+        "classes": [
+          "event-size"
+        ],
+        "score": 15
+      },
+      {
+        "selector": "span[class*=\"game\"]",
+        "tag": "span",
+        "classes": [
+          "m-game-id"
+        ],
+        "score": 15
+      }
+    ],
+    "team_elements": [
+      {
+        "selector": "div[class*=\"team\"]",
+        "tag": "div",
+        "classes": [
+          "team"
+        ],
+        "score": 15
+      },
+      {
+        "selector": "div[class*=\"home\"]",
+        "tag": "div",
+        "classes": [
+          "home-link"
+        ],
+        "score": 15
+      }
+    ],
+    "odds_buttons": [
+      {
+        "selector": "div[class*=\"outcome\"]",
+        "tag": "div",
+        "classes": [
+          "m-outcome",
+          "m-event-outcome-default"
+        ],
+        "score": 30
+      },
+      {
+        "selector": "span[class*=\"odds\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 20
+      },
+      {
+        "selector": "span[class*=\"outcome\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 20
+      },
+      {
+        "selector": "div[class*=\"odds\"]",
+        "tag": "div",
+        "classes": [
+          "m-choose-odds"
+        ],
+        "score": 18
+      },
+      {
+        "selector": "div[class*=\"selection\"]",
+        "tag": "div",
+        "classes": [
+          "wrapper",
+          "wrapper-gap",
+          "real-theme",
+          "is-empty-selection"
+        ],
+        "score": 15
+      }
+    ],
+    "market_buttons": [
+      {
+        "selector": "div[class*=\"tab\"]",
+        "tag": "div",
+        "classes": [
+          "early-payout-toggle-tabs",
+          "prematch-mkt-tab",
+          "has-live"
+        ],
+        "score": 30
+      },
+      {
+        "selector": "div[class*=\"market\"]",
+        "tag": "div",
+        "classes": [
+          "m-table-cell",
+          "market-title"
+        ],
+        "score": 25
+      }
+    ],
+    "selection_buttons": [
+      {
+        "selector": "div[class*=\"outcome\"]",
+        "tag": "div",
+        "classes": [
+          "m-outcome",
+          "m-event-outcome-default"
+        ],
+        "score": 30
+      },
+      {
+        "selector": "span[class*=\"odds\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 20
+      },
+      {
+        "selector": "span[class*=\"outcome\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 20
+      },
+      {
+        "selector": "div[class*=\"odds\"]",
+        "tag": "div",
+        "classes": [
+          "m-choose-odds"
+        ],
+        "score": 18
+      },
+      {
+        "selector": "div[class*=\"selection\"]",
+        "tag": "div",
+        "classes": [
+          "wrapper",
+          "wrapper-gap",
+          "real-theme",
+          "is-empty-selection"
+        ],
+        "score": 15
+      }
+    ],
+    "betslip_container": [
+      {
+        "selector": "div[class*=\"slip\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-mode-real"
+        ],
+        "score": 40
+      },
+      {
+        "selector": "div[id*=\"slip\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-mode-real"
+        ],
+        "score": 40
+      },
+      {
+        "selector": "div[class*=\"bet\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-mode-real"
+        ],
+        "score": 40
+      },
+      {
+        "selector": "div[id*=\"bet\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-mode-real"
+        ],
+        "score": 40
+      },
+      {
+        "selector": "div[class*=\"slip\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-float-wrapper",
+          "real-theme"
+        ],
+        "score": 23
+      }
+    ]
+  }
+}

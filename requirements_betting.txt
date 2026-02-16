@@ -1,0 +1,9 @@
+# Betting Automation Framework Dependencies
+# Educational/Testing purposes only
+
+# Browser Automation
+playwright>=1.40.0
+fake-useragent>=1.4.0
+
+# Note: Install Playwright browsers after installing dependencies:
+# playwright install chromium

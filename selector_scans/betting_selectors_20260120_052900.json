@@ -1,0 +1,605 @@
+{
+  "scan_metadata": {
+    "timestamp": "2026-01-20T05:26:56.209771",
+    "url": "https://www.sportybet.com/gh/m/",
+    "scanner_version": "2.0.0"
+  },
+  "selectors": {
+    "search_elements": {
+      "description": "Elements matching search_elements patterns",
+      "items": [
+        {
+          "selector": "[class*=\"search\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-icon-search"
+          ],
+          "attributes": {
+            "data-op": "home-search-icon",
+            "class": "m-icon-search"
+          },
+          "score": 0
+        }
+      ]
+    },
+    "navigation_links": {
+      "description": "Elements matching navigation_links patterns",
+      "items": [
+        {
+          "selector": "[class*=\"nav\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-main-mid",
+            "m-has-bottom-nav",
+            "has-bg-color"
+          ],
+          "text_content": "SportyBet   Join Now Log in            \n      UEFA Champions League\n     \n      EFL Champion­ship\n  ",
+          "attributes": {
+            "class": "m-main-mid m-has-bottom-nav has-bg-color"
+          },
+          "score": 0
+        },
+        {
+          "selector": ":text(\"menu\")",
+          "tag_name": "span",
+          "classes": [
+            "label"
+          ],
+          "text_content": "AZ Menu",
+          "attributes": {
+            "class": "label"
+          },
+          "score": 0
+        },
+        {
+          "selector": ":has-text(\"menu\")",
+          "tag_name": "html",
+          "classes": [],
+          "text_content": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var",
+          "attributes": {
+            "lang": "en",
+            "theme": "light"
+          },
+          "score": 0
+        },
+        {
+          "selector": ":has-text(\"menu\")",
+          "tag_name": "body",
+          "classes": [],
+          "id": "notInWebView",
+          "text_content": "Loading...\n\nData Failed loading. Please reload.\nReload\n\n\n\n\n!function(t,e){try{window.assetsRetry=e()",
+          "attributes": {
+            "class": "",
+            "style": "",
+            "id": "notInWebView",
+            "spellcheck": "false",
+            "data-os": "other",
+            "data-lock-count": "0"
+          },
+          "score": 0
+        },
+        {
+          "selector": "[class*=\"header\"]",
+          "tag_name": "div",
+          "classes": [
+            "featured-header-left"
+          ],
+          "text_content": "Featured\n         MatchesGamesCodesVirtuals   ",
+          "attributes": {
+            "data-v-0d4eb919": "",
+            "class": "featured-header-left"
+          },
+          "score": 0
+        }
+      ]
+    },
+    "buttons": {
+      "description": "Elements matching buttons patterns",
+      "items": [
+        {
+          "selector": "[class*=\"button\"]",
+          "tag_name": "div",
+          "classes": [
+            "fb-login-button"
+          ],
+          "attributes": {
+            "class": "fb-login-button",
+            "data-width": "130",
+            "data-max-rows": "1",
+            "data-size": "medium",
+            "data-button-type": "login_with",
+            "data-show-faces": "false",
+            "data-auto-logout-link": "false",
+            "data-use-continue-as": "false",
+            "style": "display: none;"
+          },
+          "score": 0
+        },
+        {
+          "selector": "[class*=\"btn\"]",
+          "tag_name": "div",
+          "classes": [
+            "fail-btn"
+          ],
+          "text_content": "Reload",
+          "attributes": {
+            "class": "fail-btn"
+          },
+          "score": 0
+        }
+      ]
+    },
+    "match_containers": {
+      "description": "Betting-specific: match_containers",
+      "items": [
+        {
+          "selector": "div[class*=\"match\"]",
+          "tag_name": "div",
+          "classes": [
+            "prematch-live-banner"
+          ],
+          "text_content": "All Live 111",
+          "attributes": {
+            "data-v-3ada1eb0": "",
+            "data-op": "label-prematch-live",
+            "class": "prematch-live-banner",
+            "data-offset": "44",
+            "data-new-z-index": "1000",
+            "data-cls": "undefined",
+            "data-disable-sticky": "false"
+          },
+          "score": 20
+        },
+        {
+          "selector": "div[class*=\"event\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-event-list"
+          ],
+          "text_content": "Football\n       ^FootballvFootballBasketballTenniseFootballTable TenniseBasketballIce HockeyHandball",
+          "attributes": {
+            "data-v-4c984e7f": "",
+            "class": "m-event-list"
+          },
+          "score": 15
+        },
+        {
+          "selector": "span[class*=\"event\"]",
+          "tag_name": "span",
+          "classes": [
+            "event-size"
+          ],
+          "text_content": "265",
+          "attributes": {
+            "data-v-7b3f7dcf": "",
+            "class": "event-size"
+          },
+          "score": 15
+        },
+        {
+          "selector": "span[class*=\"game\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-game-id"
+          ],
+          "text_content": "ID 21941",
+          "attributes": {
+            "class": "m-game-id"
+          },
+          "score": 15
+        }
+      ]
+    },
+    "team_elements": {
+      "description": "Betting-specific: team_elements",
+      "items": [
+        {
+          "selector": "div[class*=\"team\"]",
+          "tag_name": "div",
+          "classes": [
+            "team"
+          ],
+          "text_content": "FC Kairat Almaty",
+          "attributes": {
+            "class": "team"
+          },
+          "score": 15
+        },
+        {
+          "selector": "div[class*=\"home\"]",
+          "tag_name": "div",
+          "classes": [
+            "home-link"
+          ],
+          "text_content": "",
+          "attributes": {
+            "data-v-306758cc": "",
+            "class": "home-link"
+          },
+          "score": 15
+        }
+      ]
+    },
+    "odds_buttons": {
+      "description": "Betting-specific: odds_buttons",
+      "items": [
+        {
+          "selector": "div[class*=\"outcome\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-outcome",
+            "m-event-outcome-default"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds",
+            "class": "m-outcome m-event-outcome-default"
+          },
+          "score": 30
+        },
+        {
+          "selector": "span[class*=\"odds\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 20
+        },
+        {
+          "selector": "span[class*=\"outcome\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 20
+        },
+        {
+          "selector": "div[class*=\"odds\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-choose-odds"
+          ],
+          "text_content": "Odds",
+          "attributes": {
+            "data-v-1aafd040": "",
+            "data-v-4959e07f": "",
+            "tabindex": "0",
+            "class": "m-choose-odds"
+          },
+          "score": 18
+        },
+        {
+          "selector": "div[class*=\"selection\"]",
+          "tag_name": "div",
+          "classes": [
+            "wrapper",
+            "wrapper-gap",
+            "real-theme",
+            "is-empty-selection"
+          ],
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin",
+          "attributes": {
+            "data-v-a3bdddce": "",
+            "class": "wrapper wrapper-gap real-theme is-empty-selection"
+          },
+          "score": 15
+        },
+        {
+          "selector": "div[class*=\"market\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-table-cell",
+            "market-title"
+          ],
+          "text_content": "1X2",
+          "attributes": {
+            "class": "m-table-cell market-title"
+          },
+          "score": 15
+        }
+      ]
+    },
+    "market_buttons": {
+      "description": "Betting-specific: market_buttons",
+      "items": [
+        {
+          "selector": "div[class*=\"tab\"]",
+          "tag_name": "div",
+          "classes": [
+            "early-payout-toggle-tabs",
+            "prematch-mkt-tab",
+            "has-live"
+          ],
+          "text_content": " 1X2O/UDCHandicapHome O/UAway O/U1st Half O/UCorners O/UGG/NGGG/NG 2+1st Half 1X22+ Goals Streak3+ ",
+          "attributes": {
+            "data-v-7d941b8e": "",
+            "data-v-4c984e7f": "",
+            "data-op": "early-payout-toggle-tab",
+            "class": "early-payout-toggle-tabs prematch-mkt-tab has-live"
+          },
+          "score": 30
+        },
+        {
+          "selector": "div[class*=\"market\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-table-cell",
+            "market-title"
+          ],
+          "text_content": "1X2",
+          "attributes": {
+            "class": "m-table-cell market-title"
+          },
+          "score": 25
+        }
+      ]
+    },
+    "selection_buttons": {
+      "description": "Betting-specific: selection_buttons",
+      "items": [
+        {
+          "selector": "div[class*=\"outcome\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-outcome",
+            "m-event-outcome-default"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds",
+            "class": "m-outcome m-event-outcome-default"
+          },
+          "score": 30
+        },
+        {
+          "selector": "span[class*=\"odds\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 20
+        },
+        {
+          "selector": "span[class*=\"outcome\"]",
+          "tag_name": "span",
+          "classes": [
+            "m-outcome-odds"
+          ],
+          "text_content": "6.31",
+          "attributes": {
+            "data-op": "label-odds-amount",
+            "class": "m-outcome-odds"
+          },
+          "score": 20
+        },
+        {
+          "selector": "div[class*=\"odds\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-choose-odds"
+          ],
+          "text_content": "Odds",
+          "attributes": {
+            "data-v-1aafd040": "",
+            "data-v-4959e07f": "",
+            "tabindex": "0",
+            "class": "m-choose-odds"
+          },
+          "score": 18
+        },
+        {
+          "selector": "div[class*=\"selection\"]",
+          "tag_name": "div",
+          "classes": [
+            "wrapper",
+            "wrapper-gap",
+            "real-theme",
+            "is-empty-selection"
+          ],
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin",
+          "attributes": {
+            "data-v-a3bdddce": "",
+            "class": "wrapper wrapper-gap real-theme is-empty-selection"
+          },
+          "score": 15
+        },
+        {
+          "selector": "div[class*=\"market\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-table-cell",
+            "market-title"
+          ],
+          "text_content": "1X2",
+          "attributes": {
+            "class": "m-table-cell market-title"
+          },
+          "score": 15
+        }
+      ]
+    },
+    "betslip_container": {
+      "description": "Betting-specific: betslip_container",
+      "items": [
+        {
+          "selector": "div[class*=\"slip\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-mode-real"
+          ],
+          "id": "real-betslip-container",
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin SingleMultipleSystem    Code Hub  My Pins  ",
+          "attributes": {
+            "id": "real-betslip-container",
+            "data-op": "betslip-container",
+            "data-betslip-mode": "real",
+            "class": "betslip-mode-real"
+          },
+          "score": 40
+        },
+        {
+          "selector": "div[id*=\"slip\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-mode-real"
+          ],
+          "id": "real-betslip-container",
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin SingleMultipleSystem    Code Hub  My Pins  ",
+          "attributes": {
+            "id": "real-betslip-container",
+            "data-op": "betslip-container",
+            "data-betslip-mode": "real",
+            "class": "betslip-mode-real"
+          },
+          "score": 40
+        },
+        {
+          "selector": "div[class*=\"bet\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-mode-real"
+          ],
+          "id": "real-betslip-container",
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin SingleMultipleSystem    Code Hub  My Pins  ",
+          "attributes": {
+            "id": "real-betslip-container",
+            "data-op": "betslip-container",
+            "data-betslip-mode": "real",
+            "class": "betslip-mode-real"
+          },
+          "score": 40
+        },
+        {
+          "selector": "div[id*=\"bet\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-mode-real"
+          ],
+          "id": "real-betslip-container",
+          "text_content": "0\n      SIM\n     \n      REAL\n     SIM REALRegisterLogin SingleMultipleSystem    Code Hub  My Pins  ",
+          "attributes": {
+            "id": "real-betslip-container",
+            "data-op": "betslip-container",
+            "data-betslip-mode": "real",
+            "class": "betslip-mode-real"
+          },
+          "score": 40
+        },
+        {
+          "selector": "div[class*=\"slip\"]",
+          "tag_name": "div",
+          "classes": [
+            "betslip-float-wrapper",
+            "real-theme"
+          ],
+          "text_content": "0 BETSLIP",
+          "attributes": {
+            "data-op": "betslip-icon",
+            "class": "betslip-float-wrapper real-theme"
+          },
+          "score": 23
+        },
+        {
+          "selector": "div[class*=\"bet\"]",
+          "tag_name": "div",
+          "classes": [
+            "m-bet-content"
+          ],
+          "text_content": "International Clubs - UEFA Champions League  18   20/01 Tuesday  1X2 \n      HOT\n     \n      BEST ODD",
+          "attributes": {
+            "data-v-4c984e7f": "",
+            "class": "m-bet-content",
+            "style": "position: relative;"
+          },
+          "score": 15
+        }
+      ]
+    },
+    "stake_input": {
+      "description": "Betting-specific: stake_input",
+      "items": []
+    },
+    "submit_button": {
+      "description": "Betting-specific: submit_button",
+      "items": []
+    },
+    "forms": {
+      "description": "All form elements on the page",
+      "items": []
+    }
+  },
+  "interaction_flow": [
+    {
+      "stage": "sports_navigation",
+      "action": "clicked_sport_link",
+      "success": true
+    },
+    {
+      "stage": "match_details",
+      "action": "clicked_match",
+      "success": true
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "01_homepage",
+      "path": "selector_scans\\screenshots\\01_homepage.png",
+      "timestamp": "2026-01-20T05:27:47.905209"
+    },
+    {
+      "name": "02_sports_section",
+      "path": "selector_scans\\screenshots\\02_sports_section.png",
+      "timestamp": "2026-01-20T05:28:04.385184"
+    },
+    {
+      "name": "03_match_list",
+      "path": "selector_scans\\screenshots\\03_match_list.png",
+      "timestamp": "2026-01-20T05:28:27.478330"
+    },
+    {
+      "name": "04_match_details",
+      "path": "selector_scans\\screenshots\\04_match_details.png",
+      "timestamp": "2026-01-20T05:28:44.354538"
+    },
+    {
+      "name": "05_betslip",
+      "path": "selector_scans\\screenshots\\05_betslip.png",
+      "timestamp": "2026-01-20T05:29:00.350869"
+    }
+  ],
+  "statistics": {
+    "total_elements_found": 34,
+    "categories_scanned": 12,
+    "elements_per_category": {
+      "search_elements": 1,
+      "navigation_links": 5,
+      "buttons": 2,
+      "match_containers": 4,
+      "team_elements": 2,
+      "odds_buttons": 6,
+      "market_buttons": 2,
+      "selection_buttons": 6,
+      "betslip_container": 6,
+      "stake_input": 0,
+      "submit_button": 0,
+      "forms": 0
+    },
+    "screenshots_captured": 5,
+    "interaction_stages": 2
+  }
+}

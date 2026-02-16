@@ -1,0 +1,25 @@
+  {
+    "slips": 
+    {
+      "slip_id": "MS22_SLIP_0036",
+      "master_slip_id": 22,
+      "confidence_score": "0.80",
+      "total_odds": 1.51,
+      "stake": 10,
+      "estimated_return": 15.1,
+      "risk_category": "low",
+      "diversity_score": null,
+      "legs": [
+        {
+          "match_id": 86,
+          "home_team": "FC Kairat Almaty",
+          "away_team": "Club Brugge",
+          "market": "1x2",
+          "selection": "Away",
+          "odds": 1.51
+        }
+     
+      ],
+      "created_at": "2026-01-19T02:15:55.000000Z"
+    }
+  }

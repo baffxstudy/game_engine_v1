@@ -1,0 +1,132 @@
+{
+  "url": "https://www.sportybet.com/gh/m/",
+  "timestamp": "2026-01-20T05:06:48.878480",
+  "recommended_selectors": {
+    "navigation_links": [
+      {
+        "selector": "[class*=\"nav\"]",
+        "tag": "div",
+        "classes": [
+          "m-main-mid",
+          "m-has-bottom-nav",
+          "has-bg-color"
+        ],
+        "score": 0
+      },
+      {
+        "selector": "[class*=\"header\"]",
+        "tag": "div",
+        "classes": [
+          "featured-header-left"
+        ],
+        "score": 0
+      }
+    ],
+    "buttons": [
+      {
+        "selector": "[class*=\"button\"]",
+        "tag": "div",
+        "classes": [
+          "fb-login-button"
+        ],
+        "score": 0
+      },
+      {
+        "selector": "[class*=\"btn\"]",
+        "tag": "div",
+        "classes": [
+          "fail-btn"
+        ],
+        "score": 0
+      }
+    ],
+    "match_odds": [
+      {
+        "selector": "div[class*=\"outcome\"]",
+        "tag": "div",
+        "classes": [
+          "featuredMatchOutcome",
+          "outcomes"
+        ],
+        "score": 33
+      },
+      {
+        "selector": "span[class*=\"odds\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 28
+      },
+      {
+        "selector": "span[class*=\"outcome\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 28
+      },
+      {
+        "selector": "span[class*=\"odd\"]",
+        "tag": "span",
+        "classes": [
+          "m-outcome-odds"
+        ],
+        "score": 28
+      },
+      {
+        "selector": "div[class*=\"odds\"]",
+        "tag": "div",
+        "classes": [
+          "odds"
+        ],
+        "score": 23
+      }
+    ],
+    "match_markets": [
+      {
+        "selector": "div[class*=\"tab\"]",
+        "tag": "div",
+        "classes": [
+          "tabList"
+        ],
+        "score": 28
+      }
+    ],
+    "betslip_container": [
+      {
+        "selector": "div[class*=\"slip\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-float-wrapper",
+          "real-theme"
+        ],
+        "score": 31
+      },
+      {
+        "selector": "div[class*=\"betslip\"]",
+        "tag": "div",
+        "classes": [
+          "betslip-float-wrapper",
+          "real-theme"
+        ],
+        "score": 31
+      },
+      {
+        "selector": "div[class*=\"bet\"]",
+        "tag": "div",
+        "classes": [
+          "m-bet-tab"
+        ],
+        "score": 23
+      }
+    ]
+  },
+  "search_elements": {
+    "search_inputs": [],
+    "search_buttons": [],
+    "best_search_input": null,
+    "best_search_button": null
+  },
+  "high_confidence_only": true
+}

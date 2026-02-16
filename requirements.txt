@@ -1,0 +1,28 @@
+# SLIP BUILDER v2.0 - Python Dependencies
+# ========================================
+
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Scientific Computing & ML
+numpy==1.24.3
+scipy==1.11.4
+
+# HTTP Requests
+requests==2.31.0
+httpx==0.25.1
+
+# Logging & Configuration
+python-dotenv==1.0.0
+
+# Testing (Optional but recommended)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Development Tools (Optional)
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
