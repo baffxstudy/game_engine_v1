@@ -11,7 +11,6 @@ INTELLIGENT SLIP BUILDER v3.0 - MONTE CARLO OPTIMIZED (refactored from v2.1)
 """
 
 import logging
-import json
 from decimal import Decimal, getcontext
 from typing import Dict, List, Any, Optional, Set, Tuple, FrozenSet
 from dataclasses import dataclass, field
@@ -145,427 +144,142 @@ class Slip:
         return " | ".join(reasons)
 
 
-# MARKET REGISTRY (ENHANCED with robust parsing & detailed logging)
+# MARKET REGISTRY (preserved with small performance tweaks)
 class MarketRegistry:
     def __init__(self):
         self.matches: Dict[int, Dict[str, List[MarketSelection]]] = {}
         self.match_metadata: Dict[int, Dict[str, Any]] = {}
         self.available_market_codes: Set[str] = set()
         self.total_selections: int = 0
-        
-        # NEW: Diagnostic counters
-        self._stats = {
-            'matches_processed': 0,
-            'matches_with_markets': 0,
-            'markets_found': 0,
-            'markets_accepted': 0,
-            'markets_rejected': 0,
-            'selections_found': 0,
-            'selections_accepted': 0,
-            'selections_rejected': 0,
-            'rejection_reasons': defaultdict(int)
-        }
 
     def build(self, payload: Dict[str, Any]) -> None:
-        """Build market registry with enhanced diagnostic logging"""
-        logger.info("=" * 80)
-        logger.info("[MARKET REGISTRY] Starting payload parsing")
-        logger.info("=" * 80)
-        
-        # Reset stats for this build
-        self._reset_stats()
-        
+        logger.info("Building market registry from payload")
         master = payload.get("master_slip", payload)
         matches = master.get("matches", [])
-        
-        logger.info(f"[REGISTRY] Payload structure:")
-        logger.info(f"  - Has 'master_slip' key: {'master_slip' in payload}")
-        logger.info(f"  - Matches found: {len(matches)}")
-        
-        if not isinstance(matches, list):
-            logger.error(f"[REGISTRY] 'matches' is not a list: {type(matches)}")
-            raise SlipBuilderError(f"Invalid matches type: {type(matches)}")
-        
-        if not matches:
-            logger.error("[REGISTRY] Empty matches list")
-            raise SlipBuilderError("No matches found in payload")
-        
-        # Process each match
-        for match_idx, match_data in enumerate(matches):
-            self._stats['matches_processed'] += 1
-            
+
+        if not isinstance(matches, list) or not matches:
+            raise SlipBuilderError("No valid matches found in payload")
+
+        for match_data in matches:
             if not isinstance(match_data, dict):
-                logger.warning(f"[REGISTRY] Match {match_idx} is not a dict: {type(match_data)}")
                 continue
-                
             match_id = self._extract_match_id(match_data)
             if match_id is None:
-                logger.warning(f"[REGISTRY] Match {match_idx} has no valid ID, skipping")
                 continue
-            
-            logger.debug(f"[REGISTRY] Processing match {match_id} (index: {match_idx})")
-            
-            # Store match metadata
+
             self.match_metadata[match_id] = {
                 "home_team": match_data.get("home_team", "Unknown"),
                 "away_team": match_data.get("away_team", "Unknown"),
                 "league": match_data.get("league", "Unknown"),
                 "match_date": match_data.get("match_date", "Unknown"),
             }
-            
-            # Extract markets with flexible structure detection
-            markets_data = self._extract_markets_flexible(match_data, match_id)
-            
-            if markets_data:
-                market_map = self._parse_markets_flexible(match_id, markets_data)
-                if market_map:
-                    self.matches[match_id] = market_map
-                    self._stats['matches_with_markets'] += 1
-                    logger.debug(f"[REGISTRY] Match {match_id}: parsed {len(market_map)} markets")
-                else:
-                    logger.warning(f"[REGISTRY] Match {match_id}: no valid markets after parsing")
+
+            markets_data = self._extract_markets(match_data)
+            market_map = self._parse_markets(match_id, markets_data)
+            if market_map:
+                self.matches[match_id] = market_map
+                logger.debug(f"Loaded match {match_id}: {len(market_map)} markets")
             else:
-                logger.warning(f"[REGISTRY] Match {match_id}: no markets found in payload")
-        
-        # DIAGNOSTIC SUMMARY BEFORE FAILURE
-        logger.info("=" * 80)
-        logger.info("[REGISTRY] PARSING SUMMARY")
-        logger.info("=" * 80)
-        logger.info(f"Matches processed: {self._stats['matches_processed']}")
-        logger.info(f"Matches with markets: {self._stats['matches_with_markets']}")
-        logger.info(f"Markets found: {self._stats['markets_found']}")
-        logger.info(f"Markets accepted: {self._stats['markets_accepted']}")
-        logger.info(f"Markets rejected: {self._stats['markets_rejected']}")
-        logger.info(f"Selections found: {self._stats['selections_found']}")
-        logger.info(f"Selections accepted: {self._stats['selections_accepted']}")
-        logger.info(f"Selections rejected: {self._stats['selections_rejected']}")
-        
-        if self._stats['rejection_reasons']:
-            logger.info("Rejection reasons:")
-            for reason, count in self._stats['rejection_reasons'].items():
-                logger.info(f"  - {reason}: {count}")
-        
-        # Sample first rejected market if any
-        if hasattr(self, '_last_rejected_market'):
-            logger.info(f"Sample rejected market: {json.dumps(self._last_rejected_market, default=str)[:500]}")
-        
-        logger.info("=" * 80)
-        
-        # FINAL VALIDATION
+                logger.warning(f"No valid markets for match {match_id}")
+
         if not self.matches:
-            logger.error("[REGISTRY] CRITICAL: No valid markets found after parsing")
-            logger.error(f"Matches processed: {self._stats['matches_processed']}")
-            logger.error(f"Markets found: {self._stats['markets_found']}")
-            logger.error(f"Markets accepted: {self._stats['markets_accepted']}")
-            
-            # Log the first match structure to help debug
-            if matches and len(matches) > 0:
-                logger.error(f"First match structure: {json.dumps(matches[0], default=str)[:1000]}")
-            
             raise SlipBuilderError("No valid markets found after parsing payload")
-        
-        logger.info(f"[REGISTRY] SUCCESS: Built registry with {len(self.matches)} matches, "
-                   f"{len(self.available_market_codes)} unique markets, "
-                   f"{self.total_selections} total selections")
-        logger.info("=" * 80)
-    
-    def _reset_stats(self):
-        """Reset diagnostic counters"""
-        self._stats = {
-            'matches_processed': 0,
-            'matches_with_markets': 0,
-            'markets_found': 0,
-            'markets_accepted': 0,
-            'markets_rejected': 0,
-            'selections_found': 0,
-            'selections_accepted': 0,
-            'selections_rejected': 0,
-            'rejection_reasons': defaultdict(int)
-        }
-    
-    def _extract_match_id(self, match_data: Dict[str, Any]) -> Optional[int]:
-        """Extract match ID from various possible keys"""
-        match_id = (
-            match_data.get("match_id") or 
-            match_data.get("id") or 
-            match_data.get("fixture_id") or
-            match_data.get("matchId")
+
+        logger.info(
+            f"Registry built: {len(self.matches)} matches, "
+            f"{len(self.available_market_codes)} unique markets, "
+            f"{self.total_selections} total selections"
         )
-        
+
+    def _extract_match_id(self, match_data: Dict[str, Any]) -> Optional[int]:
+        match_id = match_data.get("match_id") or match_data.get("id") or match_data.get("fixture_id")
         if match_id is None:
-            logger.debug(f"Match missing ID, keys: {list(match_data.keys())}")
+            logger.debug("Skipped match with missing ID")
             return None
-        
         try:
             return int(match_id)
         except (ValueError, TypeError):
-            logger.debug(f"Match has invalid ID: {match_id}")
+            logger.debug(f"Skipped match with invalid ID: {match_id}")
             return None
-    
-    def _extract_markets_flexible(self, match_data: Dict[str, Any], match_id: int) -> List[Dict]:
-        """
-        Extract markets with flexible structure detection.
-        Supports multiple possible key names and structures.
-        """
-        # Try different possible market container keys
-        possible_keys = [
-            "match_markets",
-            "markets", 
-            "full_markets",
-            "market_data",
-            "betting_markets"
-        ]
-        
-        markets = []
-        source_key = None
-        
-        for key in possible_keys:
-            if key in match_data:
-                candidate = match_data.get(key, [])
-                if isinstance(candidate, list):
-                    markets = candidate
-                    source_key = key
-                    logger.debug(f"Match {match_id}: found markets under '{key}' ({len(markets)} items)")
-                    break
-                elif isinstance(candidate, dict):
-                    # Handle case where markets might be a dict
-                    logger.debug(f"Match {match_id}: markets under '{key}' is dict, converting")
-                    markets = [candidate]
-                    source_key = key
-                    break
-        
-        if not markets and source_key is None:
-            logger.debug(f"Match {match_id}: no market container found, keys: {list(match_data.keys())}")
-        
-        self._stats['markets_found'] += len(markets)
+
+    def _extract_markets(self, match_data: Dict[str, Any]) -> List[Dict]:
+        markets = (
+            match_data.get("match_markets")
+            or match_data.get("markets")
+            or match_data.get("full_markets")
+            or []
+        )
+        if not isinstance(markets, list):
+            return []
         return markets
-    
-    def _parse_markets_flexible(self, match_id: int, markets_data: List[Dict]) -> Dict[str, List[MarketSelection]]:
-        """
-        Parse markets with support for multiple structures.
-        Never silently skips - logs all rejections.
-        """
+
+    def _parse_markets(self, match_id: int, markets_data: List[Dict]) -> Dict[str, List[MarketSelection]]:
         market_map: Dict[str, List[MarketSelection]] = {}
-        
-        for market_idx, market_entry in enumerate(markets_data):
+        for market_entry in markets_data:
             if not isinstance(market_entry, dict):
-                self._stats['markets_rejected'] += 1
-                reason = f"Market {market_idx} not a dict"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}: {reason}")
-                self._last_rejected_market = market_entry  # Store rejected market for debugging
                 continue
-            
-            # EXTRACT MARKET CODE - Support multiple structures
-            market_code = None
-            market_info = None
-            
-            # Structure A: {"market": {"code": "MATCH_RESULT"}, "selections": [...]}
-            if "market" in market_entry and isinstance(market_entry["market"], dict):
-                market_info = market_entry["market"]
-                market_code = (
-                    market_info.get("code") or 
-                    market_info.get("market_type") or 
-                    market_info.get("type") or
-                    market_info.get("name")
-                )
-                logger.debug(f"Match {match_id}: Structure A detected, code={market_code}")
-            
-            # Structure B: {"market_type": "MATCH_RESULT", "outcomes": [...]}
-            elif "market_type" in market_entry:
-                market_code = market_entry.get("market_type")
-                market_info = {"code": market_code, "name": market_entry.get("name")}
-                logger.debug(f"Match {match_id}: Structure B detected, code={market_code}")
-            
-            # Structure C: {"code": "MATCH_RESULT", "selections": [...]}
-            elif "code" in market_entry:
-                market_code = market_entry.get("code")
-                market_info = {"code": market_code, "name": market_entry.get("name")}
-                logger.debug(f"Match {match_id}: Structure C detected, code={market_code}")
-            
-            # Structure D: {"type": "MATCH_RESULT", "outcomes": [...]}
-            elif "type" in market_entry:
-                market_code = market_entry.get("type")
-                market_info = {"code": market_code, "name": market_entry.get("name")}
-                logger.debug(f"Match {match_id}: Structure D detected, code={market_code}")
-            
-            # Try to find any field that might contain market code
-            else:
-                for key in ["marketName", "bet_type", "market_id", "id"]:
-                    if key in market_entry:
-                        market_code = str(market_entry.get(key, ""))
-                        if market_code:
-                            logger.debug(f"Match {match_id}: Found potential market code under '{key}': {market_code}")
-                            break
-            
+            market_info = market_entry.get("market", market_entry)
+            if not isinstance(market_info, dict):
+                continue
+            market_code = (
+                market_info.get("code")
+                or market_info.get("market_type")
+                or market_info.get("type")
+            )
             if not market_code:
-                self._stats['markets_rejected'] += 1
-                reason = f"Market {market_idx} has no code"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.warning(f"Match {match_id}: {reason}, entry keys: {list(market_entry.keys())}")
-                self._last_rejected_market = market_entry  # Store rejected market for debugging
+                logger.debug(f"Skipped market with no code for match {match_id}")
                 continue
-            
-            market_code = str(market_code).strip().upper()
-            
-            # EXTRACT SELECTIONS - Support multiple structures
-            selections_data = None
-            
-            # Try to find selections/outcomes
-            if "selections" in market_entry:
-                selections_data = market_entry.get("selections", [])
-                logger.debug(f"Match {match_id}: Found selections under 'selections' key")
-            elif "outcomes" in market_entry:
-                selections_data = market_entry.get("outcomes", [])
-                logger.debug(f"Match {match_id}: Found selections under 'outcomes' key")
-            elif "options" in market_entry:
-                selections_data = market_entry.get("options", [])
-                logger.debug(f"Match {match_id}: Found selections under 'options' key")
-            elif "bets" in market_entry:
-                selections_data = market_entry.get("bets", [])
-                logger.debug(f"Match {match_id}: Found selections under 'bets' key")
-            
-            if selections_data is None and market_info and "selections" in market_info:
-                selections_data = market_info.get("selections", [])
-                logger.debug(f"Match {match_id}: Found selections nested in market object")
-            
-            if not isinstance(selections_data, list):
-                self._stats['markets_rejected'] += 1
-                reason = f"Market {market_idx} selections not a list"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.warning(f"Match {match_id}: {reason}, got {type(selections_data)}")
-                self._last_rejected_market = market_entry  # Store rejected market for debugging
-                continue
-            
-            # PARSE SELECTIONS
-            selections = self._parse_selections_flexible(match_id, market_code, selections_data)
-            
+            market_code = str(market_code).strip()
+            selections = self._parse_selections(match_id, market_code, market_entry)
             if selections:
                 market_map[market_code] = selections
                 self.available_market_codes.add(market_code)
                 self.total_selections += len(selections)
-                self._stats['markets_accepted'] += 1
-                logger.debug(f"Match {match_id}, market {market_code}: accepted {len(selections)} selections")
             else:
-                self._stats['markets_rejected'] += 1
-                reason = f"Market {market_idx} has no valid selections"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}, market {market_code}: no valid selections")
-                self._last_rejected_market = market_entry  # Store rejected market for debugging
-        
+                logger.debug(f"No valid selections for match {match_id}, market {market_code}")
         return market_map
-    
-    def _parse_selections_flexible(self, match_id: int, market_code: str, selections_data: List[Dict]) -> List[MarketSelection]:
-        """
-        Parse selections with flexible structure support.
-        Never silently skips - logs all rejections with reasons.
-        """
+
+    def _parse_selections(self, match_id: int, market_code: str, market_entry: Dict) -> List[MarketSelection]:
+        selections_data = (
+            market_entry.get("selections")
+            or market_entry.get("outcomes")
+            or []
+        )
+        if not isinstance(selections_data, list):
+            return []
         valid_selections = []
-        
-        for sel_idx, selection_data in enumerate(selections_data):
-            self._stats['selections_found'] += 1
-            
+        for selection_data in selections_data:
             if not isinstance(selection_data, dict):
-                self._stats['selections_rejected'] += 1
-                reason = f"Selection {sel_idx} not a dict"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}, market {market_code}: {reason}")
                 continue
-            
-            # EXTRACT SELECTION VALUE - Support multiple keys
-            value = None
-            possible_value_keys = ["value", "name", "label", "selection", "outcome", "bet_name", "title"]
-            
-            for key in possible_value_keys:
-                if key in selection_data:
-                    candidate = selection_data.get(key)
-                    if candidate is not None and str(candidate).strip():
-                        value = str(candidate).strip()
-                        logger.debug(f"Match {match_id}: found value under '{key}': {value}")
-                        break
-            
-            if value is None:
-                self._stats['selections_rejected'] += 1
-                reason = f"Selection {sel_idx} missing value field"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}, market {market_code}: {reason}, keys: {list(selection_data.keys())}")
-                continue
-            
-            # EXTRACT ODDS - Support multiple keys with type coercion
-            odds = None
-            possible_odds_keys = ["odds", "price", "decimal_odds", "value", "odd", "bet_odds"]
-            
-            for key in possible_odds_keys:
-                if key in selection_data:
-                    odds_raw = selection_data.get(key)
-                    try:
-                        # Handle both string and numeric odds
-                        odds = Decimal(str(odds_raw))
-                        logger.debug(f"Match {match_id}: found odds under '{key}': {odds}")
-                        break
-                    except (TypeError, ValueError, ArithmeticError) as e:
-                        logger.debug(f"Match {match_id}: odds under '{key}' invalid: {odds_raw}, error: {e}")
-                        continue
-            
-            if odds is None:
-                self._stats['selections_rejected'] += 1
-                reason = f"Selection {sel_idx} missing or invalid odds"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}, market {market_code}: {reason}")
-                continue
-            
-            # VALIDATE ODDS
+            value = (
+                selection_data.get("value")
+                or selection_data.get("name")
+                or selection_data.get("label")
+                or "Unknown"
+            )
             try:
+                odds = Decimal(str(selection_data.get("odds")))
                 if odds < Decimal("1.01"):
-                    self._stats['selections_rejected'] += 1
-                    reason = f"Selection {sel_idx} odds too low: {odds}"
-                    self._stats['rejection_reasons'][reason] += 1
-                    logger.debug(f"Match {match_id}: {reason}")
+                    logger.debug(f"Skipped selection with odds too low: {odds}")
                     continue
-                    
                 if odds > Decimal("1000"):
-                    self._stats['selections_rejected'] += 1
-                    reason = f"Selection {sel_idx} odds too high: {odds}"
-                    self._stats['rejection_reasons'][reason] += 1
-                    logger.debug(f"Match {match_id}: {reason}")
+                    logger.debug(f"Skipped selection with odds too high: {odds}")
                     continue
-                    
-            except (TypeError, ArithmeticError):
-                self._stats['selections_rejected'] += 1
-                reason = f"Selection {sel_idx} odds comparison failed"
-                self._stats['rejection_reasons'][reason] += 1
+            except (TypeError, ValueError, ArithmeticError):
+                logger.debug("Skipped selection with invalid odds")
                 continue
-            
-            # CREATE SELECTION
-            try:
-                selection = MarketSelection(
-                    match_id=match_id,
-                    market_code=market_code,
-                    selection=value,
-                    odds=odds
-                )
-                valid_selections.append(selection)
-                self._stats['selections_accepted'] += 1
-                
-            except Exception as e:
-                self._stats['selections_rejected'] += 1
-                reason = f"Selection creation failed: {str(e)}"
-                self._stats['rejection_reasons'][reason] += 1
-                logger.debug(f"Match {match_id}: {reason}")
-                continue
-        
+            valid_selections.append(MarketSelection(match_id=match_id, market_code=market_code, selection=str(value), odds=odds))
         return valid_selections
-    
-    # Original methods (unchanged)
+
     def get_matches(self) -> List[int]:
         return list(self.matches.keys())
-    
+
     def get_markets_for_match(self, match_id: int) -> List[str]:
         return list(self.matches.get(match_id, {}).keys())
-    
+
     def get_selections(self, match_id: int, market_code: str) -> List[MarketSelection]:
         return self.matches.get(match_id, {}).get(market_code, [])
-    
+
     def get_match_info(self, match_id: int) -> Dict[str, Any]:
         return self.match_metadata.get(match_id, {})
 
@@ -1149,28 +863,6 @@ class SlipBuilder:
         master_slip_id = int(master_slip_data.get("master_slip_id", 0))
 
         registry = MarketRegistry()
-        
-        # TEMPORARY DEBUG BLOCK - REMOVE AFTER FIXING
-        logger.info("=== PAYLOAD DEBUG ===")
-        logger.info(f"Payload keys: {list(payload.keys())}")
-        logger.info(f"Has 'master_slip': {'master_slip' in payload}")
-        if 'master_slip' in payload:
-            logger.info(f"Master slip keys: {list(payload['master_slip'].keys())}")
-            logger.info(f"Matches in master_slip: {'matches' in payload['master_slip']}")
-            if 'matches' in payload['master_slip']:
-                matches = payload['master_slip']['matches']
-                logger.info(f"Matches count: {len(matches)}")
-                for i, match in enumerate(matches[:3]):  # Log first 3 matches only
-                    logger.info(f"Match {i} keys: {list(match.keys())}")
-                    logger.info(f"Match {i} markets: {len(match.get('match_markets', []))}")
-                    if match.get('match_markets'):
-                        for j, market in enumerate(match['match_markets'][:2]):
-                            logger.info(f"  Market {j} keys: {list(market.keys())}")
-                            if 'market' in market:
-                                logger.info(f"    Market code: {market['market'].get('code')}")
-                                logger.info(f"    Selections count: {len(market.get('selections', []))}")
-        # ====================
-        
         registry.build(payload)
 
         optimizer = ActiveMonteCarloOptimizer(
